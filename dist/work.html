@@ -1,120 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://use.fontawesome.com/40bc15ae10.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>View My Work</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="https://use.fontawesome.com/40bc15ae10.js"></script>
-  <link rel="stylesheet" href="css/main.css">
-  <title>View My Work</title>
-</head>
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
 
-<body>
-  <header>
-    <div class="menu-btn">
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-    </div>
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              About Me
+            </a>
+          </li>
+          <li class="nav-item current">
+            <a href="work.html" class="nav-link">
+              My Work
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <nav class="menu">
-      <div class="menu-branding">
-        <div class="portrait">
+    <main id="work">
+      <h1 class="lg-heading">My <span class="text-secondary">Work</span></h1>
 
+      <h2 class="sm-heading">
+        Check out some of my projects...
+      </h2>
+
+      <div class="projects">
+        <div class="item">
+          <a href="https://paint-a-good-boy.herokuapp.com/" target="_blank">
+            <img src="img/projects/paint-a-good-boy.png" alt="project 1" />
+          </a>
+          <a
+            href="https://paint-a-good-boy.herokuapp.com/"
+            class="btn-light"
+            target="_blank"
+          >
+            <i class="fa fa-eye"></i> Project
+          </a>
+          <a
+            href="https://github.com/mwmcguire/Paint_A_Good_Boy-Project-3"
+            class="btn-dark"
+            target="_blank"
+          >
+            <i class="fa fa-github"></i> Github
+          </a>
+        </div>
+
+        <div class="item">
+          <a
+            href="https://armchair-fantasy-draft-app.herokuapp.com/"
+            target="_blank"
+          >
+            <img src="img/projects/fantasy-draft-game.jpg" alt="project 2" />
+          </a>
+          <a
+            href="https://armchair-fantasy-draft-app.herokuapp.com/"
+            class="btn-light"
+            target="_blank"
+          >
+            <i class="fa fa-eye"></i> Project
+          </a>
+          <a
+            href="https://github.com/mwmcguire/Project-2--Group-Redis"
+            class="btn-dark"
+            target="_blank"
+          >
+            <i class="fa fa-github"></i> Github
+          </a>
+        </div>
+
+        <div class="item">
+          <a
+            href="https://mwmcguire.github.io/flix-n-chill/index.html"
+            target="_blank"
+          >
+            <img src="img/projects/flixnchill-screen.jpg" alt="project 3" />
+          </a>
+          <a
+            href="https://mwmcguire.github.io/flix-n-chill/index.html"
+            class="btn-light"
+            target="_blank"
+          >
+            <i class="fa fa-eye"></i> Project
+          </a>
+          <a
+            href="https://github.com/mwmcguire/flix-n-chill"
+            class="btn-dark"
+            target="_blank"
+          >
+            <i class="fa fa-github"></i> Github
+          </a>
+        </div>
+
+        <div class="item">
+          <a
+            href="https://mwmcguire.github.io/crystal-collector/index.html"
+            target="_blank"
+          >
+            <img src="img/projects/crystals-screen.jpg" alt="project 4" />
+          </a>
+          <a
+            href="https://mwmcguire.github.io/crystal-collector/index.html"
+            class="btn-light"
+            target="_blank"
+          >
+            <i class="fa fa-eye"></i> Project
+          </a>
+          <a
+            href="https://github.com/mwmcguire/crystal-collector"
+            class="btn-dark"
+            target="_blank"
+          >
+            <i class="fa fa-github"></i> Github
+          </a>
         </div>
       </div>
-      <ul class="menu-nav">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link">
-            Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link">
-            About Me
-          </a>
-        </li>
-        <li class="nav-item current">
-          <a href="work.html" class="nav-link">
-            My Work
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link">
-            Contact
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    </main>
 
-  <main id="work">
-    <h1 class="lg-heading">
-      My <span class="text-secondary">Work</span>
-    </h1>
+    <footer id="main-footer">
+      Copyright &copy; 2019
+    </footer>
 
-    <h2 class="sm-heading">
-      Check out some of my projects...
-    </h2>
-
-    <div class="projects">
-      <div class="item">
-        <a href="https://armchair-fantasy-draft-app.herokuapp.com/" target="_blank">
-          <img src="img/projects/fantasy-draft-game.jpg" alt="project 1">
-        </a>
-        <a href="https://armchair-fantasy-draft-app.herokuapp.com/" class="btn-light" target="_blank">
-          <i class="fa fa-eye"></i> Project
-        </a>
-        <a href="https://github.com/mwmcguire/Project-2--Group-Redis" class="btn-dark" target="_blank">
-          <i class="fa fa-github"></i> Github
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="https://mwmcguire.github.io/flix-n-chill/index.html" target="_blank">
-          <img src="img/projects/flixnchill-screen.jpg" alt="project 2">
-        </a>
-        <a href="https://mwmcguire.github.io/flix-n-chill/index.html" class="btn-light" target="_blank">
-          <i class="fa fa-eye"></i> Project
-        </a>
-        <a href="https://github.com/mwmcguire/flix-n-chill" class="btn-dark" target="_blank">
-          <i class="fa fa-github"></i> Github
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="https://mwmcguire.github.io/train_scheduler/index.html" target="_blank">
-          <img src="img/projects/train-scheduler.jpg" alt="project 3">
-        </a>
-        <a href="https://mwmcguire.github.io/train_scheduler/index.html" class="btn-light" target="_blank">
-          <i class="fa fa-eye"></i> Project
-        </a>
-        <a href="https://github.com/mwmcguire/train_scheduler" class="btn-dark" target="_blank">
-          <i class="fa fa-github"></i> Github
-        </a>
-      </div>
-
-      <div class="item">
-        <a href="https://mwmcguire.github.io/crystal-collector/index.html" target="_blank">
-          <img src="img/projects/crystals-screen.jpg" alt="project 4">
-        </a>
-        <a href="https://mwmcguire.github.io/crystal-collector/index.html" class="btn-light" target="_blank">
-          <i class="fa fa-eye"></i> Project
-        </a>
-        <a href="https://github.com/mwmcguire/crystal-collector" class="btn-dark" target="_blank">
-          <i class="fa fa-github"></i> Github
-        </a>
-      </div>
-
-    </div>
-  </main>
-
-  <footer id="main-footer">
-    Copyright &copy; 2019
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
-
+    <script src="js/main.js"></script>
+  </body>
 </html>
