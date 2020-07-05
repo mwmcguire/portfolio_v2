@@ -1,17 +1,19 @@
-@import "config";
-@import "menu";
+@use "sass:color";
+@use "sass:meta";
+@use 'config';
+@use 'menu';
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  @include background;
-  background: var($primary-color);
-  color: set-text-color($primary-color);
+  @include config.background;
+  background: config.$primary-color;
+  color: config.set-text-color(config.$primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
 
@@ -29,7 +31,7 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    background: rgba(color.adjust(config.$primary-color, $lightness: 2), 0.5);
   }
 }
 
@@ -45,7 +47,7 @@ header {
 }
 
 .text-secondary {
-  color: var($secondary-color);
+  color: config.$secondary-color;
 }
 
 main {
@@ -60,8 +62,8 @@ main {
       padding: 0.4rem;
 
       &:hover {
-        color: var($secondary-color);
-        @include easeOut();
+        color: config.$secondary-color;
+        @include config.easeOut();
       }
     }
   }
@@ -79,15 +81,15 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    "bioimage bio bio"
-    "job1 job2 job3";
+    'bioimage bio bio'
+    'job1 job2 job3';
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: var($secondary-color) 3px solid;
+    border: var(config.$secondary-color) 3px solid;
   }
 
   .bio {
@@ -108,9 +110,9 @@ main {
   }
 
   .job {
-    background: lighten($primary-color, 5);
+    background: color.adjust(config.$primary-color, $lightness: 5);
     padding: 0.5rem;
-    border-bottom: var($secondary-color) 5px solid;
+    border-bottom: config.$secondary-color 5px solid;
   }
 }
 
@@ -126,8 +128,8 @@ main {
 
     &:hover {
       opacity: 0.5;
-      border-color: var($secondary-color);
-      @include easeOut;
+      border-color: config.$secondary-color;
+      @include config.easeOut;
     }
   }
 }
@@ -137,7 +139,7 @@ main {
   margin: 10px auto;
   max-width: 400px;
   padding: 20px 12px 10px 20px;
-  font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font: 13px 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 }
 
 .form-style-1 li {
@@ -154,14 +156,14 @@ main {
   font-weight: bold;
 }
 
-.form-style-1 input[type="text"],
-.form-style-1 input[type="date"],
-.form-style-1 input[type="datetime"],
-.form-style-1 input[type="number"],
-.form-style-1 input[type="search"],
-.form-style-1 input[type="time"],
-.form-style-1 input[type="url"],
-.form-style-1 input[type="email"],
+.form-style-1 input[type='text'],
+.form-style-1 input[type='date'],
+.form-style-1 input[type='datetime'],
+.form-style-1 input[type='number'],
+.form-style-1 input[type='search'],
+.form-style-1 input[type='time'],
+.form-style-1 input[type='url'],
+.form-style-1 input[type='email'],
 textarea,
 select {
   box-sizing: border-box;
@@ -170,27 +172,27 @@ select {
   border: 1px solid #bebebe;
   padding: 7px;
   margin: 0px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
+  // -webkit-transition: all 0.3s ease-in-out;
+  // -moz-transition: all 0.3s ease-in-out;
+  // -ms-transition: all 0.3s ease-in-out;
+  // -o-transition: all 0.3s ease-in-out;
   outline: none;
 }
 
-.form-style-1 input[type="text"]:focus,
-.form-style-1 input[type="date"]:focus,
-.form-style-1 input[type="datetime"]:focus,
-.form-style-1 input[type="number"]:focus,
-.form-style-1 input[type="search"]:focus,
-.form-style-1 input[type="time"]:focus,
-.form-style-1 input[type="url"]:focus,
-.form-style-1 input[type="email"]:focus,
+.form-style-1 input[type='text']:focus,
+.form-style-1 input[type='date']:focus,
+.form-style-1 input[type='datetime']:focus,
+.form-style-1 input[type='number']:focus,
+.form-style-1 input[type='search']:focus,
+.form-style-1 input[type='time']:focus,
+.form-style-1 input[type='url']:focus,
+.form-style-1 input[type='email']:focus,
 .form-style-1 textarea:focus,
 .form-style-1 select:focus {
-  -moz-box-shadow: 0 0 8px var($secondary-color);
-  -webkit-box-shadow: 0 0 8px var($secondary-color);
-  box-shadow: 0 0 8px var($secondary-color);
-  border: 1px solid var($secondary-color);
+  -moz-box-shadow: 0 0 8px config.$secondary-color;
+  -webkit-box-shadow: 0 0 8px config.$secondary-color;
+  box-shadow: 0 0 8px config.$secondary-color;
+  border: 1px solid config.$secondary-color;
 }
 
 .form-style-1 .field-divided {
@@ -210,7 +212,7 @@ select {
 }
 
 .form-style-1 .required {
-  color: var($secondary-color);
+  color: config.$secondary-color;
 }
 
 // Button Styles
@@ -221,29 +223,29 @@ select {
   margin-bottom: 0.3rem;
 
   &:hover {
-    background: var($secondary-color);
-    color: set-text-color($secondary-color);
+    background: config.$secondary-color;
+    color: config.set-text-color(config.$secondary-color);
   }
 }
 
 .btn-dark {
   @extend .btn;
-  background: darken($primary-color, 50);
+  background: color.adjust(config.$primary-color, $lightness: -50);
   color: #fff;
 }
 
 .btn-light {
   @extend .btn;
-  background: lighten($primary-color, 50);
+  background: color.adjust(config.$primary-color, $lightness: 50);
   color: #333;
 }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: darken($primary-color, 10);
-  color: set-text-color($primary-color);
+  background: color.adjust(config.$primary-color, $lightness: -10);
+  color: config.set-text-color(config.$primary-color);
   height: 60px;
 }
 
-@import "mobile";
+@include meta.load-css('mobile');
